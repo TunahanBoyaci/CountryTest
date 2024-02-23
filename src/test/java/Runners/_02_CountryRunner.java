@@ -12,8 +12,7 @@ import org.testng.annotations.Parameters;
         glue = "StepDefinitions",
         plugin = {"pretty",
                 "html:target/site/cucmber-pretty",
-                "json:target/cucumber/cucumber.json",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                "json:target/cucumber/cucumber.json"
         }
 )
 
