@@ -23,6 +23,7 @@ public class BaseDriver {
             Logger logger = Logger.getLogger("");
             logger.setLevel(Level.SEVERE);
 
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\swat_\\.cache\\selenium\\chromedriver\\win64\\122.0.6261.69\\chromedriver.exe");
             driver = new ChromeDriver();
 
             driver.manage().window().maximize();

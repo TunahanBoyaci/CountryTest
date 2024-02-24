@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Pages.LeftNavBar;
+import Utilities.BaseDriver;
 import Utilities.MyMethods2;
 import Utilities.ParameterDriver;
 import io.cucumber.java.en.And;
@@ -21,17 +22,20 @@ public class _02_Country {
 
     @And("Enter username and password")
     public void enterUsernameAndPassword() {
+        MyMethods2.myWait(3);
         dialogContent.sendKeysMethod(dialogContent.usernameInbox,"turkeyts");
         dialogContent.sendKeysMethod(dialogContent.passwordInbox,"TechnoStudy123");
     }
 
     @And("Click on login Button")
     public void clickOnLoginButton() {
+        MyMethods2.myWait(3);
         dialogContent.loginButton.click();
     }
 
     @And("Navigate to Country page")
     public void navigateToCountryPage() {
+        MyMethods2.myWait(3);
         leftNavBar.clickMethod(leftNavBar.setupButton);
         leftNavBar.clickMethod(leftNavBar.parametersButton);
         leftNavBar.clickMethod(leftNavBar.countriesButton);
@@ -39,6 +43,7 @@ public class _02_Country {
 
     @When("Create a new country")
     public void createANewCountry() {
+        MyMethods2.myWait(3);
         dialogContent.clickMethod(dialogContent.addButton);
         dialogContent.sendKeysMethod(dialogContent.nameInbox,"7ryf");
         dialogContent.sendKeysMethod(dialogContent.codeInbox,"9yr7");
@@ -52,6 +57,7 @@ public class _02_Country {
 
     @And("Search for a country")
     public void searchForACountry() {
+        MyMethods2.myWait(3);
         dialogContent.sendKeysMethod(dialogContent.codeInboxSearchInboxSearch,"9yr7");
         dialogContent.clickMethod(dialogContent.searchButton);
     }
@@ -66,23 +72,27 @@ public class _02_Country {
 
     @And("Click on add Button")
     public void clickOnAddButton() {
+        MyMethods2.myWait(3);
         dialogContent.clickMethod(dialogContent.addButton);
     }
 
     @And("Enter {string} as country name and {string} as country code")
     public void enterAsCountryNameAndAsCountryCode(String countryName, String countryCode) {
+        MyMethods2.myWait(3);
         dialogContent.sendKeysMethod(dialogContent.nameInbox,countryName);
         dialogContent.sendKeysMethod(dialogContent.codeInbox,countryCode);
     }
 
     @When("Click on save button")
     public void clickOnSaveButton() {
+        MyMethods2.myWait(3);
         dialogContent.clickMethod(dialogContent.saveButton);
 
     }
 
     @And("Search for {string} as code")
     public void searchForAsCountryNameAndAsCode(String codeInbox) {
+        MyMethods2.myWait(3);
         dialogContent.sendKeysMethod(dialogContent.codeInboxNew,codeInbox);
         dialogContent.clickMethod(dialogContent.searchButton);
     }
