@@ -37,7 +37,7 @@ public class _02_Country {
     @And("Navigate to Country page")
     public void navigateToCountryPage() {
         MyMethods2.myWait(3);
-        leftNavBar.clickMethod(leftNavBar.setupButton);
+        leftNavBar.clickMethod(leftNavBar.messagingButon);
         MyMethods2.myWait(3);
         leftNavBar.clickMethod(leftNavBar.parametersButton);
         MyMethods2.myWait(3);

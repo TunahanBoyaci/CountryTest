@@ -14,6 +14,9 @@ public class LeftNavBar extends MyMethods {
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement setupButton;
 
+    @FindBy(xpath = "//span[text()='Messaging']")
+    public WebElement messagingButon;
+
     @FindBy(xpath = "(//span[text()='Parameters'])[1]")
     public WebElement parametersButton;
 
