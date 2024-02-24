@@ -6,6 +6,8 @@ Feature: Country Functionality
     Given Navigate to Campus
     And Enter username and password
     And Click on login Button
+    And Click on login Button
+    And Verify login
     And Navigate to Country page
     And Click on add Button
     And Enter "2e66ir" as country name and "h661" as country code

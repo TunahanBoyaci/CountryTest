@@ -9,6 +9,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 
 public class _02_Country {
     DialogContent dialogContent = new DialogContent();
@@ -36,7 +37,7 @@ public class _02_Country {
     @And("Navigate to Country page")
     public void navigateToCountryPage() {
         MyMethods2.myWait(3);
-        leftNavBar.clickMethod(leftNavBar.entranceExamsButton);
+        leftNavBar.clickMethod(leftNavBar.setupButton);
         MyMethods2.myWait(3);
         leftNavBar.clickMethod(leftNavBar.parametersButton);
         MyMethods2.myWait(3);
@@ -97,5 +98,12 @@ public class _02_Country {
         MyMethods2.myWait(3);
         dialogContent.sendKeysMethod(dialogContent.codeInboxNew,codeInbox);
         dialogContent.clickMethod(dialogContent.searchButton);
+    }
+
+    @And("Verify login")
+    public void verifyLogin() {
+        MyMethods2.myWait(3);
+
+        Assert.assertTrue(dialogContent.homePageIndicator.isDisplayed());
     }
 }

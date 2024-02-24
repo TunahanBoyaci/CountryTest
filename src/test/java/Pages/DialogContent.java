@@ -109,6 +109,9 @@ public class DialogContent extends MyMethods {
     @FindBy(css = "iframe[class=\"tox-edit-area__iframe\"]")
     public WebElement iFrame;
 
+    @FindBy(css = "//span[text()='Techno Study Intern School']")
+    public WebElement homePageIndicator;
+
     @FindBy(xpath = "//tbody[@role='rowgroup']//td[2]")
     public List<WebElement> statesList;
 
