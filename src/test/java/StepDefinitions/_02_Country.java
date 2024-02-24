@@ -17,15 +17,15 @@ public class _02_Country {
 
     @Given("Navigate to Campus")
     public void navigateToCampus() {
-        ParameterDriver.getDriver().get("https://test.mersys.io/");
+        ParameterDriver.getDriver().get("http://www.tunahanboyaci.com/wp-login.php?redirect_to=http%3A%2F%2Fwww.tunahanboyaci.com%2Fwp-admin%2Fpost.php%3Fpost%3D406%26action%3Dedit&reauth=1");
 
     }
 
     @And("Enter username and password")
     public void enterUsernameAndPassword() {
         MyMethods2.myWait(3);
-        dialogContent.sendKeysMethod(dialogContent.usernameInbox,"turkeyts");
-        dialogContent.sendKeysMethod(dialogContent.passwordInbox,"TechnoStudy123");
+        dialogContent.sendKeysMethod(dialogContent.usernameInbox,"info@tunahanboyaci.com");
+        dialogContent.sendKeysMethod(dialogContent.passwordInbox,"1256780Tuna.!");
     }
 
     @And("Click on login Button")
@@ -114,5 +114,35 @@ public class _02_Country {
         String pageSource = ParameterDriver.getDriver().getPageSource();
 
         System.out.println(pageSource);
+    }
+
+    @And("I change the title")
+    public void iChangeTheTitle() {
+        MyMethods2.myWait(3);
+
+        dialogContent.sendKeysMethod(dialogContent.titleInbox,"qwe");
+    }
+
+    @And("I click on update")
+    public void iClickOnUpdate() {
+        MyMethods2.myWait(3);
+
+        dialogContent.clickMethod(dialogContent.updateButton);
+    }
+
+    @And("I click on home")
+    public void iClickOnHome() {
+        MyMethods2.myWait(3);
+
+        dialogContent.clickMethod(dialogContent.homePagebutt);
+
+    }
+
+    @And("Verify change")
+    public void verifyChange() {
+        MyMethods2.myWait(3);
+
+        Assert.assertTrue(dialogContent.qwe.isDisplayed());
+
     }
 }

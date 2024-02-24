@@ -19,14 +19,26 @@ public class DialogContent extends MyMethods {
     @FindBy(xpath = "//ms-add-button[@tooltip=\"COUNTRY.TITLE.ADD\"]")
     public WebElement addButton;
 
-    @FindBy(xpath = "//input[@placeholder=\"Username\"]")
+    @FindBy(xpath = "//input[@autocomplete=\"username\"]")
     public WebElement usernameInbox;
 
-    @FindBy(xpath = "//input[@placeholder=\"Password\"]")
+    @FindBy(xpath = "//input[@type=\"password\"]")
     public WebElement passwordInbox;
 
-    @FindBy(xpath = "//button[@aria-label=\"LOGIN\"]")
+    @FindBy(xpath = "//input[@value=\"Log In\"]")
     public WebElement loginButton;
+
+    @FindBy(xpath = "//input[@id=\"title\"]")
+    public WebElement titleInbox;
+
+    @FindBy(xpath = "(//input[@name=\"save\"])[2]")
+    public WebElement updateButton;
+
+    @FindBy(xpath = "//a[text()='Tunahan Boyaci']")
+    public WebElement homePagebutt;
+
+    @FindBy(xpath = "(//a[@title=\"qwe\"])[2]")
+    public WebElement qwe;
 
     @FindBy(xpath = "(//input[@data-placeholder='Name'])[2]")
     public WebElement nameInbox;
