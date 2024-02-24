@@ -6,7 +6,6 @@ Feature: Country Functionality
     Given Navigate to Campus
     And Enter username and password
     And Click on login Button
-    And Click on login Button
     And Verify login
     And Navigate to Country page
     And Click on add Button
@@ -18,6 +17,7 @@ Feature: Country Functionality
     Given Navigate to Campus
     And Enter username and password
     And Click on login Button
+    And Verify login
     And Navigate to Country page
     And Search for "h661" as code
     When Click on Delete and Confirm
