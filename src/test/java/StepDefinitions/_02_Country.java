@@ -106,4 +106,13 @@ public class _02_Country {
 
         Assert.assertTrue(dialogContent.homePageIndicator.isDisplayed());
     }
+
+    @And("Get all the page")
+    public void getAllThePage() {
+        MyMethods2.myWait(3);
+
+        String pageSource = ParameterDriver.getDriver().getPageSource();
+
+        System.out.println(pageSource);
+    }
 }
