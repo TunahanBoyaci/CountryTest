@@ -37,7 +37,9 @@ public class _02_Country {
     public void navigateToCountryPage() {
         MyMethods2.myWait(3);
         leftNavBar.clickMethod(leftNavBar.setupButton);
+        MyMethods2.myWait(3);
         leftNavBar.clickMethod(leftNavBar.parametersButton);
+        MyMethods2.myWait(3);
         leftNavBar.clickMethod(leftNavBar.countriesButton);
     }
 
