@@ -11,7 +11,7 @@ public class LeftNavBar extends MyMethods {
         PageFactory.initElements(ParameterDriver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[@class=\"nav-link-title ng-tns-c2719486145-6 ng-star-inserted\" and text()='Setup']")
+    @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement setupButton;
 
     @FindBy(xpath = "(//span[text()='Parameters'])[1]")
